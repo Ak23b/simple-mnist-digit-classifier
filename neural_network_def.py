@@ -101,6 +101,7 @@ for epoch in range(EPOCHS):
     print(f"Epoch {epoch+1} Test Accuracy: {accuracy:.2f} %")
     test_accuracies.append(accuracy) # store test accuracy
 
+
 # Training Loss
 plt.subplot(1,2,1)
 plt.plot(train_losses,marker='o')
@@ -117,10 +118,12 @@ plt.ylabel("Accuracy (%)")
 
 plt.show()
 
+
 # ------------ Visualize Predictions ---------------
 model.eval()
 examples = enumerate(test_loader)
 batch_idx, (example_data,example_targets) = next(examples)
+
 
 with torch.no_grad():
     example_data = example_data.to(device)
@@ -135,6 +138,7 @@ for i in range(6):
     plt.title(f"Pred {output.data.max(1, keepdim=True)[1][i].item()} | True: {example_targets[i].item()}")
     plt.xticks([])
     plt.yticks([])
+   
     
 plt.show()
     
