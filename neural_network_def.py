@@ -88,6 +88,7 @@ for epoch in range(EPOCHS):
     model.eval()
     correct = 0
     total = 0
+     
         
     with torch.no_grad():
         for data, targets in test_loader:
@@ -108,6 +109,7 @@ plt.plot(train_losses,marker='o')
 plt.title("Training Loss")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
+
 
 # Test Accuracy
 plt.subplot(1,2,1)
