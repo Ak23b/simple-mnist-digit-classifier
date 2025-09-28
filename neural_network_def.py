@@ -68,11 +68,13 @@ for epoch in range(EPOCHS):
         data = data.view(data.shape[0], -1).to(device)
         targets = targets.to(device) 
             
+            
         optimizer.zero_grad()
         outputs = model(data)
         loss = criterion(outputs, targets)
         loss.backward()
         optimizer.step()
+            
             
         running_loss += loss.item()
             
@@ -83,6 +85,7 @@ for epoch in range(EPOCHS):
     avg_loss = running_loss / len(train_loader)
     print(f"Epoch {epoch+1} Training Loss: {avg_loss:.4f}")
     train_losses.append(avg_loss) # store training loss
+        
         
     # Testing 
     model.eval()
