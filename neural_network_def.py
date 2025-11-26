@@ -121,7 +121,6 @@ plt.ylabel("Accuracy (%)")
 
 plt.show()
 
-
 # ------------ Visualize Predictions ---------------
 model.eval()
 examples = enumerate(test_loader)
