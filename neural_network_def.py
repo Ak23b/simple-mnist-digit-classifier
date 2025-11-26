@@ -91,8 +91,7 @@ for epoch in range(EPOCHS):
     model.eval()
     correct = 0
     total = 0
-     
-        
+             
     with torch.no_grad():
         for data, targets in test_loader:
             data = data.view(data.shape[0], -1).to(device)
