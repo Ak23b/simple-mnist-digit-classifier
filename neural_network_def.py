@@ -126,7 +126,6 @@ model.eval()
 examples = enumerate(test_loader)
 batch_idx, (example_data,example_targets) = next(examples)
 
-
 with torch.no_grad():
     example_data = example_data.to(device)
     output = model(example_data.view(example_data.shape[0], -1))
