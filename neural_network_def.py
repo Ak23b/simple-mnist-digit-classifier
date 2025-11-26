@@ -129,8 +129,7 @@ batch_idx, (example_data,example_targets) = next(examples)
 with torch.no_grad():
     example_data = example_data.to(device)
     output = model(example_data.view(example_data.shape[0], -1))
-    
-    
+        
 # Plot first 6 test images with predictions
 fig = plt.figure(figsize=(10, 5))
 for i in range(6):
