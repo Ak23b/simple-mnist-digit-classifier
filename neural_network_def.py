@@ -112,7 +112,6 @@ plt.title("Training Loss")
 plt.xlabel("Epoch")
 plt.ylabel("Loss")
 
-
 # Test Accuracy
 plt.subplot(1,2,1)
 plt.plot(test_accuracies,marker='o')
