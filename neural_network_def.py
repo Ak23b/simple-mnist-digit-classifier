@@ -139,8 +139,7 @@ for i in range(6):
     plt.title(f"Pred {output.data.max(1, keepdim=True)[1][i].item()} | True: {example_targets[i].item()}")
     plt.xticks([])
     plt.yticks([])
-   
-    
+       
 plt.show()
     
         
